@@ -1,0 +1,7 @@
+---
+# tasks file for install
+- name: install k3s
+  shell: 
+    cmd: INSTALL_K3S_SKIP_DOWNLOAD=true ./install.sh
+    chdir: roles/install/files/
+
