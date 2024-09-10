@@ -1,2 +1,14 @@
 ---
 # tasks file for agent
+# - name: copy files to agent node
+#   copy: 
+#     src: roles/install/files/
+#     dest: /tmp
+#     mode: '0755'
+
+
+
+# - name: install k3s on agent
+#   shell: 
+#   cmd: INSTALL_K3S_SKIP_DOWNLOAD=true K3S_URL=https://172.18.0.4:6443 K3S_TOKEN=<YOUR_TOKEN> ./install.sh
+#   chdir: /tmp

@@ -6,3 +6,10 @@
   roles:
     - { role: install }
 
+
+- hosts: node
+  become: yes
+  roles:
+      - { role: agent }
+
+

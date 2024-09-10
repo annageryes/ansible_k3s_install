@@ -4,4 +4,7 @@
   shell: 
     cmd: INSTALL_K3S_SKIP_DOWNLOAD=true ./install.sh
     chdir: roles/install/files/
+  delegate_to: localhost
+
+
 
