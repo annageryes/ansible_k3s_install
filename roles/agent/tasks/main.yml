@@ -9,7 +9,7 @@
 
 - name: copy files to agent node
   copy: 
-    src: roles/install/files/
+    src: ../../roles/install/files/
     dest: "/var/lib/rancher/k3s/agent/images/"
     mode: '0755'
 

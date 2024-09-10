@@ -1,9 +1,10 @@
 ---
 # tasks file for install
+
 - name: install k3s
   shell: 
     cmd: INSTALL_K3S_SKIP_DOWNLOAD=true ./install.sh
-    chdir: roles/install/files/
+    chdir: ../files/
 
 - name: get master url
   shell: cat /etc/systemd/system/k3s-agent.service.env | awk -F "K3S_URL=" '{printf $2}'
