@@ -1,10 +1,9 @@
 ---
 # tasks file for install
+- name: copy executable and binaries
 - name: install k3s
-  command: 
-    cmd: ./install.sh
-    argv:
-      INSTALL_K3S_SKIP_DOWNLOAD: "true"
+  shell: 
+    cmd: INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_BIN_DIR./install.sh
     chdir: roles/install/files/
 
 - name: get master url
