@@ -3,7 +3,7 @@
 - name: install k3s
   command: 
     cmd: ./install.sh
-    environment:
+    argv:
       INSTALL_K3S_SKIP_DOWNLOAD: "true"
     chdir: roles/install/files/
 
