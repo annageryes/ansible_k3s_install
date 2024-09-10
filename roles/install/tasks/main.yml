@@ -1,6 +1,5 @@
 ---
 # tasks file for install
-- name: copy executable and binaries
 - name: install k3s
   command: 
     cmd: ./install.sh
