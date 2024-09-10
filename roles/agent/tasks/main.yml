@@ -3,9 +3,9 @@
 
 - name: create dicrectory
   file:
-  path: "/var/lib/rancher/k3s/agent/images/"
-  state: present
-  mode: "0755"
+    path: "/var/lib/rancher/k3s/agent/images/"
+    state: present
+    mode: "0755"
 
 - name: copy files to agent node
   copy: 
