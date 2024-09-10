@@ -8,7 +8,7 @@
     - { role: install }
 
 
-- hosts: node
+- hosts: k3s_nodes
   become: yes
   roles:
       - { role: agent }
