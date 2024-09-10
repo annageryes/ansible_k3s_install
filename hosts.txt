@@ -3,7 +3,7 @@ worker1
 worker2
 
 [node]
-worker1
+worker2
 
 
 [all:vars]
