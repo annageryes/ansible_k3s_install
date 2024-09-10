@@ -1,5 +1,4 @@
 [all]
-localhost
 worker1
 worker2
 
@@ -7,3 +6,11 @@ worker2
 worker1
 
 
+[all:vars]
+ansible_user=jenkins
+ansible_password=jenkins
+
+
+[all:node]
+ansible_user=jenkins
+ansible_password=jenkins

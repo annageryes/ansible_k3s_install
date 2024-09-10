@@ -4,7 +4,11 @@
   shell: 
     cmd: INSTALL_K3S_SKIP_DOWNLOAD=true ./install.sh
     chdir: roles/install/files/
-  delegate_to: localhost
 
+- name: get master url
+  shell: cat /etc/systemd/system/k3s-agent.service.env | awk -F "K3S_URL=" '{printf $2}'
+  register: KS3_URL
 
-
+- name: get master url
+  shell: cat /etc/systemd/system/k3s-agent.service.env | awk -F "K3S_TOKEN=" '{printf $2}'
+  register: KS3_TOKEN
