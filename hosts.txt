@@ -1,16 +1,17 @@
 [all]
-worker1
-worker2
+node01
+node02
 
-[node]
-worker2
+[k3s_nodes]
+node01
+node02
 
 
 [all:vars]
-ansible_user=jenkins
-ansible_password=jenkins
+ansible_user=admin
+ansible_password=admin
 
 
 [all:node]
-ansible_user=jenkins
-ansible_password=jenkins
+ansible_user=admin
+ansible_password=admin

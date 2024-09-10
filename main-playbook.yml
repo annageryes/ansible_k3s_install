@@ -4,6 +4,7 @@
     ansible_connection: local
   become: yes
   roles:
+    - { role: copy}
     - { role: install }
 
 

@@ -1,21 +1,7 @@
 ---
 # tasks file for agent
 
-- name: create dicrectory
-  file:
-    path: "/var/lib/rancher/k3s/agent/images/"
-    state: present
-    mode: "0755"
-
-- name: copy files to agent node
-  copy: 
-    src: roles/install/files/
-    dest: "/var/lib/rancher/k3s/agent/images/"
-    mode: '0755'
-
-
-
 - name: install k3s on agent
   shell: 
     cmd: INSTALL_K3S_SKIP_DOWNLOAD=true K3S_URL=https://"{{K3S_URL}}" K3S_TOKEN="{{K3S_TOKEN}}" ./install.sh
-    chdir: "/var/lib/rancher/k3s/agent/images/"
+    chdir: /usr/local/usr/

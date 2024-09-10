@@ -1,15 +1,23 @@
 ---
 # tasks file for install
-- name: copy executable and binaries
+
 - name: install k3s
   shell: 
-    cmd: INSTALL_K3S_SKIP_DOWNLOAD=true INSTALL_K3S_BIN_DIR./install.sh
-    chdir: roles/install/files/
+    cmd: sudo INSTALL_K3S_SKIP_DOWNLOAD=true ./install.sh
+    chdir: /usr/local/usr/
 
 - name: get master url
-  shell: cat /etc/systemd/system/k3s-agent.service.env | awk -F "K3S_URL=" '{printf $2}'
-  register: KS3_URL
+  shell: cat /etc/systemd/system/k3s-agent.service.env | awk -F "K3S_URL=" '{printf $2}' | tr -d '\047'
+  register: K3S_URL
+
+- name: debug
+  debug:
+    msg: "{{K3S_URL.stdout_lines}}"
 
 - name: get master token
-  shell: cat /etc/systemd/system/k3s-agent.service.env | awk -F "K3S_TOKEN=" '{printf $2}'
-  register: KS3_TOKEN
+  shell: cat /etc/systemd/system/k3s-agent.service.env | awk -F "K3S_TOKEN=" '{printf $2}' | tr -d '\047'
+  register: K3S_TOKEN
+
+- name: debug
+  debug:
+    msg: "{{K3S_TOKEN.stdout_lines}}"
