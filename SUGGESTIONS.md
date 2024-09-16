@@ -2,10 +2,10 @@
 
 ### Project
 - Missing .gitignore
+- Project DOES NOT do what is suppose to do: It is NOT OFF-LINE installer
 
 ### README
 - Missing link to task.md
-- Missing 
 
 ### Shell script: `run_playbook.sh`
 
