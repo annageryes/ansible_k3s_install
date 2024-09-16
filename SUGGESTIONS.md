@@ -1,5 +1,12 @@
 # Suggestions
 
+### Project
+- Missing .gitignore
+
+### README
+- Missing link to task.md
+- Missing 
+
 ### Shell script: `run_playbook.sh`
 
 - Missing script description
