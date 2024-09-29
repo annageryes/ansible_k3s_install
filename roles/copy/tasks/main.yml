@@ -1,0 +1,20 @@
+---
+# tasks file for copy
+
+- name: create dicrectory
+  file:
+    path:  /usr/local/bin/k3s/
+    state: directory
+    mode: "0755"
+
+- name: copy executables
+  copy:
+    src: roles/copy/files/install.sh 
+    dest: /usr/local/usr/
+    mode: "0755"
+
+- name: copy binaries
+  copy:
+    src: roles/copy/files/k3s-airgap-images-amd64.tar.gz
+    dest: /usr/local/bin/k3s/k3s-airgap-images-amd64.tar.gz
+    mode: "0755"
