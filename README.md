@@ -1,4 +1,7 @@
 # ansible_k3s_install  - HW4
+Written by anna sakran 
+August 2024 - devops course
+Task requirments is defined in [task.md](task.md)
 
 ### requirments:
   - server node with ansible to run the playbook on 
