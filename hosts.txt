@@ -1,1 +1,13 @@
+[all]
+node01
+node02
 
+[k3s_nodes]
+node01
+node02
+[all:vars]
+ansible_user=admin
+ansible_password=admin
+[all:node]
+ansible_user=admin
+ansible_password=admin
