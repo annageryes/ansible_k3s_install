@@ -5,7 +5,7 @@ Task requirments is defined in [task.md](task.md)
 
 ### requirments:
   - server node with ansible to run the playbook on 
-  - one or more node VM with ansible ( please provide node names in the hosts.txt with the user )
+  - one or more node VM with ansible ( MUST PROVIDE IN  [hosts.txt](hosts.txt) node names with the user if you will not be using the class nodes we practiced)
 ### how to run:
   run the bash script to trigger the playbook:
   ```./run_playbook ``` 
